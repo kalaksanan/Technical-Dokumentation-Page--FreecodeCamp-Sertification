@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #bbbbbb;
+  --secondary-color: #5e8b7e;
+  --text-color: #161616;
+}
+
+body {
+  font-family: 'arial', ' Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.7em;
+  background-color: whitesmoke;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 20px;
+  grid-template-areas: 'nav main';
+}
+
+.nav-head {
+  font-size: 1.3em;
+  font-weight: bolder;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #f3889a;
+}
+li {
+  list-style-type: none;
+}
+.nav-link {
+  text-decoration: none;
+}
+nav ul li {
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+nav ul li a {
+  color: #f3889a;
+}
+nav ul li a:hover {
+  color: whitesmoke;
+}
+hr {
+  margin-top: 15px;
+}
+hr:hover {
+  background-color: #f3889a;
+}
+
+.nav ul {
+  text-align: center;
+  padding: 20px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+
+nav {
+  background-color: #175873;
+  border-radius: 7px;
+  grid-area: nav;
+}
+hr {
+  color: whitesmoke;
+}
+
+.main {
+  padding: 0 20px;
+  margin-left: 10px;
+  grid-area: main;
+}
+.topic {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+p {
+  text-indent: 20px;
+}
+article {
+  margin: 20px 0;
+  font-family: 'Open Sans', Arial, sans-serif !important;
+}
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: 2;
+  background-color: #ebd0d0;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+      'nav nav'
+      'main main';
+  }
+  nav {
+    grid-area: nav;
+    /* max-height: 100px; */
+  }
+  main {
+    grid-area: main;
+  }
+}
